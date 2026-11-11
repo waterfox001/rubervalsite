@@ -1,0 +1,6 @@
+{
+  "name": "Ruberval – Instrutor de Autoescola",
+  "description": "Instrutor de autoescola credenciado com mais de 27 anos de experiência e mais de 9 mil alunos capacitados nas categorias A e B em Fortaleza - CE.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
