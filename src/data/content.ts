@@ -44,7 +44,7 @@ export const SERVICES: ServiceCategory[] = [
     subtitle: 'Aulas práticas para condução de motos',
     description:
       'Aulas práticas para quem deseja aprender a conduzir motocicletas com segurança e responsabilidade.',
-    imageUrl: '/src/assets/images/brazilian_moto_lesson_natural_1794418067833.jpg',
+    imageUrl: '/images/moto_lesson.jpg',
     badge: 'Categoria A · Moto',
     features: [
       'Equilíbrio, postura correta e manuseio suave do acelerador',
@@ -63,7 +63,7 @@ export const SERVICES: ServiceCategory[] = [
     subtitle: 'Aulas práticas para condução de carros',
     description:
       'Aulas práticas para quem deseja aprender a dirigir carros, desenvolvendo confiança e domínio do veículo.',
-    imageUrl: '/src/assets/images/brazilian_baliza_practice_1794418068268.jpg',
+    imageUrl: '/images/baliza_practice.jpg',
     badge: 'Categoria B · Carro',
     features: [
       'Controle firme de ponto de embreagem e saída em ladeira',
@@ -130,7 +130,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'Instrutor Ruberval em Fortaleza',
     category: 'instructor',
     categoryLabel: 'Instrutor',
-    imageUrl: '/src/assets/images/ruberval_natural_portrait_1794418066351.jpg',
+    imageUrl: '/images/ruberval_portrait.jpg',
     description: 'Mais de 27 anos de dedicação e respeito na formação de condutores no Ceará.',
   },
   {
@@ -138,7 +138,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'Aula prática no trânsito real',
     category: 'instructor',
     categoryLabel: 'Aulas Práticas',
-    imageUrl: '/src/assets/images/brazilian_car_lesson_natural_1794418068169.jpg',
+    imageUrl: '/images/car_lesson.jpg',
     description: 'Instrução paciente desenvolvendo reflexos e tranquilidade nas ruas de Fortaleza.',
   },
   {
@@ -146,7 +146,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'Treino de baliza e manobras',
     category: 'category-b',
     categoryLabel: 'Categoria B',
-    imageUrl: '/src/assets/images/brazilian_baliza_practice_1794418068268.jpg',
+    imageUrl: '/images/baliza_practice.jpg',
     description: 'Treinamento de baliza entre balizadores com referências fáceis de memorizar.',
   },
   {
@@ -154,7 +154,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'Pista de treinamento de moto',
     category: 'category-a',
     categoryLabel: 'Categoria A',
-    imageUrl: '/src/assets/images/brazilian_moto_lesson_natural_1794418067833.jpg',
+    imageUrl: '/images/moto_lesson.jpg',
     description: 'Circuito de pista, curvas lentas e domínio de embreagem e freio para motos.',
   },
 ];

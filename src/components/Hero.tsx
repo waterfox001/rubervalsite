@@ -109,7 +109,7 @@ export const Hero: React.FC = () => {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden border border-neutral-200 bg-neutral-100 shadow-sm">
                 <img
-                  src="/src/assets/images/ruberval_natural_portrait_1794418066351.jpg"
+                  src="/images/ruberval_portrait.jpg"
                   alt="Ruberval – Instrutor de Autoescola em Fortaleza ao lado do veículo de treinamento"
                   className="w-full h-auto object-cover aspect-[4/3] block"
                   referrerPolicy="no-referrer"

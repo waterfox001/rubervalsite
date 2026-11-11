@@ -12,7 +12,7 @@ export const About: React.FC = () => {
           <div className="lg:col-span-5 order-2 lg:order-1">
             <div className="rounded-2xl overflow-hidden border border-neutral-200 bg-neutral-100 shadow-sm">
               <img
-                src="/src/assets/images/brazilian_car_lesson_natural_1794418068169.jpg"
+                src="/images/car_lesson.jpg"
                 alt="Ruberval durante aula prática de direção veicular com aluna em Fortaleza"
                 className="w-full h-auto object-cover aspect-[4/3] block"
                 referrerPolicy="no-referrer"
