@@ -1,8 +1,10 @@
 import React from 'react';
 import { Phone, MapPin, Instagram, ShieldCheck, ArrowUp, MessageCircle } from 'lucide-react';
-import { INSTRUCTOR_INFO, createWhatsAppUrl } from '../data/content';
+import { INSTRUCTOR_INFO } from '../data/content';
+import { useWhatsAppModal } from '../context/WhatsAppContext';
 
 export const Footer: React.FC = () => {
+  const { openWhatsAppModal } = useWhatsAppModal();
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -10,8 +12,6 @@ export const Footer: React.FC = () => {
   return (
     <footer className="bg-[#092719] text-neutral-300 border-t border-emerald-950/60 pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Main Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-emerald-900/40">
           
           {/* Brand & Credentials */}
@@ -31,12 +31,12 @@ export const Footer: React.FC = () => {
             </div>
 
             <p className="text-xs sm:text-sm text-neutral-300/80 leading-relaxed max-w-sm">
-              Mais de 27 anos de dedicação na formação de condutores responsáveis e seguros para as Categorias A (moto) e B (carro) em Fortaleza – CE.
+              Mais de 27 anos de dedicação na formação de condutores responsáveis e seguros para as {INSTRUCTOR_INFO.categories} em {INSTRUCTOR_INFO.city}.
             </p>
 
             <div className="pt-2 flex items-center gap-2 text-xs text-[#EAB308] font-semibold">
-              <ShieldCheck className="w-4 h-4" />
-              <span>Instrutor Credenciado Oficial Detran-CE</span>
+              <ShieldCheck className="w-4 h-4 shrink-0" />
+              <span>Instrutor de Trânsito Credenciado · {INSTRUCTOR_INFO.categories}</span>
             </div>
           </div>
 
@@ -94,8 +94,8 @@ export const Footer: React.FC = () => {
               <li className="flex items-start gap-2.5">
                 <Phone className="w-4 h-4 text-[#EAB308] shrink-0 mt-0.5" />
                 <a
-                  href={`tel:${INSTRUCTOR_INFO.phoneRaw}`}
-                  className="hover:text-white transition-colors"
+                  href={`tel:+${INSTRUCTOR_INFO.phoneRaw}`}
+                  className="hover:text-white transition-colors tabular-nums"
                 >
                   {INSTRUCTOR_INFO.phoneDisplay}
                 </a>
@@ -103,14 +103,13 @@ export const Footer: React.FC = () => {
 
               <li className="flex items-start gap-2.5">
                 <MessageCircle className="w-4 h-4 text-[#EAB308] shrink-0 mt-0.5" />
-                <a
-                  href={createWhatsAppUrl('Olá, Ruberval! Gostaria de informações.')}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white transition-colors"
+                <button
+                  type="button"
+                  onClick={() => openWhatsAppModal()}
+                  className="hover:text-white transition-colors tabular-nums text-left cursor-pointer"
                 >
                   WhatsApp: {INSTRUCTOR_INFO.phoneDisplay}
-                </a>
+                </button>
               </li>
 
               <li className="flex items-start gap-2.5">
@@ -141,11 +140,12 @@ export const Footer: React.FC = () => {
           <div>
             <p>© {new Date().getFullYear()} {INSTRUCTOR_INFO.fullName}. Todos os direitos reservados.</p>
             <p className="text-[11px] text-neutral-500 mt-0.5">
-              Formação de condutores categorias A e B · Fortaleza - Ceará.
+              Formação de condutores {INSTRUCTOR_INFO.categories} · {INSTRUCTOR_INFO.city}.
             </p>
           </div>
 
           <button
+            type="button"
             onClick={scrollToTop}
             className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-neutral-300 hover:text-white transition-colors border border-white/10"
             aria-label="Voltar ao início"
@@ -154,7 +154,6 @@ export const Footer: React.FC = () => {
             <ArrowUp className="w-3.5 h-3.5" />
           </button>
         </div>
-
       </div>
     </footer>
   );

@@ -1,6 +1,6 @@
 {
   "name": "Ruberval – Instrutor de Autoescola",
-  "description": "Instrutor de autoescola credenciado com mais de 27 anos de experiência e mais de 9 mil alunos capacitados nas categorias A e B em Fortaleza - CE.",
+  "description": "Ruberval de Lima Silva – Instrutor credenciado pelo Detran há 28 anos. Aulas práticas nas categorias A (moto) e B (carro) na região do Parque Dois Irmãos, Fortaleza – CE.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

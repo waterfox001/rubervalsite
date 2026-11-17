@@ -1,8 +1,10 @@
 import React from 'react';
 import { ArrowRight, MessageCircle, ShieldCheck } from 'lucide-react';
-import { INSTRUCTOR_INFO, createWhatsAppUrl } from '../data/content';
+import { useWhatsAppModal } from '../context/WhatsAppContext';
+import { SafeImage } from './SafeImage';
 
 export const Hero: React.FC = () => {
+  const { openWhatsAppModal } = useWhatsAppModal();
   const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
     const elem = document.querySelector(id);
@@ -14,7 +16,7 @@ export const Hero: React.FC = () => {
   return (
     <section id="inicio" className="pt-28 pb-16 md:pt-36 md:pb-20 bg-white border-b border-neutral-200/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           
           {/* Left Column: Direct, human presentation */}
           <div className="lg:col-span-7 flex flex-col justify-center">
@@ -43,20 +45,19 @@ export const Hero: React.FC = () => {
 
             {/* Action Buttons */}
             <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
-              <a
-                href={createWhatsAppUrl('Olá, Ruberval! Quero aprender a dirigir e gostaria de saber sobre as aulas práticas.')}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 text-sm sm:text-base font-semibold text-white bg-[#0D3B26] hover:bg-[#072417] rounded-xl transition-colors focus:outline-none focus:ring-2 focus:ring-[#0D3B26] focus:ring-offset-2 shadow-xs"
+              <button
+                type="button"
+                onClick={() => openWhatsAppModal()}
+                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 text-sm sm:text-base font-semibold text-white bg-[#0D3B26] hover:bg-[#072417] rounded-xl transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0D3B26] focus-visible:ring-offset-2 shadow-xs cursor-pointer"
               >
                 <MessageCircle className="w-5 h-5 text-[#EAB308]" />
                 <span>Quero aprender a dirigir</span>
-              </a>
+              </button>
 
               <a
                 href="#sobre"
                 onClick={(e) => handleScrollTo(e, '#sobre')}
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm sm:text-base font-semibold text-neutral-800 bg-neutral-50 hover:bg-neutral-100 rounded-xl border border-neutral-300 transition-colors focus:outline-none focus:ring-2 focus:ring-neutral-400"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm sm:text-base font-semibold text-neutral-800 bg-neutral-50 hover:bg-neutral-100 rounded-xl border border-neutral-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400"
               >
                 <span>Conheça meu trabalho</span>
                 <ArrowRight className="w-4 h-4 text-neutral-500" />
@@ -106,24 +107,24 @@ export const Hero: React.FC = () => {
 
           {/* Right Column: Genuine, clean photograph */}
           <div className="lg:col-span-5">
-            <div className="relative">
-              <div className="rounded-2xl overflow-hidden border border-neutral-200 bg-neutral-100 shadow-sm">
-                <img
+            <div className="rounded-2xl overflow-hidden border border-neutral-200 bg-neutral-100 shadow-sm">
+              <div className="aspect-[4/3] w-full overflow-hidden">
+                <SafeImage
                   src="/images/ruberval_portrait.jpg"
                   alt="Ruberval – Instrutor de Autoescola em Fortaleza ao lado do veículo de treinamento"
-                  className="w-full h-auto object-cover aspect-[4/3] block"
-                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-cover object-top block"
                   loading="eager"
+                  fallbackTitle="Ruberval – Instrutor de Autoescola"
                 />
-                
-                {/* Natural real-life caption */}
-                <div className="p-4 bg-neutral-50 border-t border-neutral-200 flex items-center justify-between text-xs text-neutral-700">
-                  <div>
-                    <span className="font-bold text-neutral-900">Ruberval</span>
-                    <span className="text-neutral-500"> — Instrutor de Autoescola</span>
-                  </div>
-                  <span className="text-[#0D3B26] font-semibold">Fortaleza – CE</span>
+              </div>
+              
+              {/* Natural real-life caption */}
+              <div className="p-4 bg-neutral-50 border-t border-neutral-200 flex items-center justify-between text-xs text-neutral-700">
+                <div>
+                  <span className="font-bold text-neutral-900">Ruberval</span>
+                  <span className="text-neutral-500"> — Instrutor de Autoescola</span>
                 </div>
+                <span className="text-[#0D3B26] font-semibold">Fortaleza – CE</span>
               </div>
             </div>
           </div>

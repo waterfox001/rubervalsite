@@ -1,8 +1,10 @@
 import React from 'react';
 import { MessageCircle, ArrowRight } from 'lucide-react';
-import { INSTRUCTOR_INFO, createWhatsAppUrl } from '../data/content';
+import { INSTRUCTOR_INFO } from '../data/content';
+import { useWhatsAppModal } from '../context/WhatsAppContext';
 
 export const CtaBanner: React.FC = () => {
+  const { openWhatsAppModal } = useWhatsAppModal();
   return (
     <section className="py-16 sm:py-20 bg-[#0D3B26] text-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -20,16 +22,15 @@ export const CtaBanner: React.FC = () => {
         </p>
 
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
-          <a
-            href={createWhatsAppUrl('Olá, Ruberval! Gostaria de conversar com você sobre as aulas de autoescola.')}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 text-sm sm:text-base font-bold text-[#0D3B26] bg-[#EAB308] hover:bg-[#F59E0B] rounded-xl transition-colors shadow-xs"
+          <button
+            type="button"
+            onClick={() => openWhatsAppModal()}
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 text-sm sm:text-base font-bold text-[#0D3B26] bg-[#EAB308] hover:bg-[#F59E0B] rounded-xl transition-colors shadow-xs cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#EAB308] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0D3B26]"
           >
             <MessageCircle className="w-5 h-5 text-[#0D3B26]" />
             <span>Fale comigo pelo WhatsApp</span>
             <ArrowRight className="w-4 h-4 ml-0.5" />
-          </a>
+          </button>
         </div>
 
         <div className="mt-6 text-xs text-emerald-200/70">

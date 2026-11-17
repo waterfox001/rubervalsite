@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { ChevronDown, MessageCircle } from 'lucide-react';
-import { FAQS, createWhatsAppUrl } from '../data/content';
+import { FAQS } from '../data/content';
+import { useWhatsAppModal } from '../context/WhatsAppContext';
 
 export const Faq: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const { openWhatsAppModal } = useWhatsAppModal();
 
   const toggleFaq = (idx: number) => {
     setOpenIndex(openIndex === idx ? null : idx);
@@ -64,15 +66,14 @@ export const Faq: React.FC = () => {
           <p className="text-xs text-neutral-500">
             Ficou com alguma dúvida específica sobre sua situação?
           </p>
-          <a
-            href={createWhatsAppUrl('Olá, Ruberval! Gostaria de tirar uma dúvida sobre minhas aulas.')}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-2 inline-flex items-center gap-1.5 text-xs font-bold text-[#0D3B26] hover:underline"
+          <button
+            type="button"
+            onClick={() => openWhatsAppModal('duvida')}
+            className="mt-2 inline-flex items-center gap-1.5 text-xs font-bold text-[#0D3B26] hover:underline cursor-pointer"
           >
             <MessageCircle className="w-3.5 h-3.5 text-[#EAB308]" />
             <span>Pergunte direto no WhatsApp</span>
-          </a>
+          </button>
         </div>
 
       </div>

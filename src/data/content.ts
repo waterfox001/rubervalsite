@@ -26,7 +26,8 @@ export const INSTRUCTOR_INFO = {
   },
   googleMaps: {
     url: 'https://maps.app.goo.gl/neC9TMiFL3xP4ofq9',
-    embedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.109157297375!2d-38.56073862417774!3d-3.807831543477123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c74c10645672ab%3A0xe104ff4fa310fa07!2sRua%20110%2C%20CJ%20Tup%C3%A3%20Mirim%2C%2046%20-%20Parque%20Dois%20Irm%C3%A3os%2C%20Fortaleza%20-%20CE%2C%2060744-480!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr',
+    embedUrl:
+      'https://maps.google.com/maps?q=Rua%20110%2C%20Conjunto%20Tup%C3%A3%20Mirim%2C%2046%20-%20Parque%20Dois%20Irm%C3%A3os%2C%20Fortaleza%20-%20CE%2C%2060744-480&t=&z=16&ie=UTF8&iwloc=&output=embed',
   },
 };
 
