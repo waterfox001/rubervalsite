@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, MapPin, Instagram, ShieldCheck, ArrowUp, MessageCircle } from 'lucide-react';
+import { MapPin, Instagram, ShieldCheck, ArrowUp, MessageCircle } from 'lucide-react';
 import { INSTRUCTOR_INFO } from '../data/content';
 import { useWhatsAppModal } from '../context/WhatsAppContext';
 
@@ -29,10 +29,6 @@ export const Footer: React.FC = () => {
                 </span>
               </div>
             </div>
-
-            <p className="text-xs sm:text-sm text-neutral-300/80 leading-relaxed max-w-sm">
-              Mais de 27 anos de dedicação na formação de condutores responsáveis e seguros para as {INSTRUCTOR_INFO.categories} em {INSTRUCTOR_INFO.city}.
-            </p>
 
             <div className="pt-2 flex items-center gap-2 text-xs text-[#EAB308] font-semibold">
               <ShieldCheck className="w-4 h-4 shrink-0" />
@@ -91,15 +87,6 @@ export const Footer: React.FC = () => {
             </p>
             
             <ul className="space-y-2.5 text-xs sm:text-sm">
-              <li className="flex items-start gap-2.5">
-                <Phone className="w-4 h-4 text-[#EAB308] shrink-0 mt-0.5" />
-                <a
-                  href={`tel:+${INSTRUCTOR_INFO.phoneRaw}`}
-                  className="hover:text-white transition-colors tabular-nums"
-                >
-                  {INSTRUCTOR_INFO.phoneDisplay}
-                </a>
-              </li>
 
               <li className="flex items-start gap-2.5">
                 <MessageCircle className="w-4 h-4 text-[#EAB308] shrink-0 mt-0.5" />
@@ -139,9 +126,6 @@ export const Footer: React.FC = () => {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400">
           <div>
             <p>© {new Date().getFullYear()} {INSTRUCTOR_INFO.fullName}. Todos os direitos reservados.</p>
-            <p className="text-[11px] text-neutral-500 mt-0.5">
-              Formação de condutores {INSTRUCTOR_INFO.categories} · {INSTRUCTOR_INFO.city}.
-            </p>
           </div>
 
           <button

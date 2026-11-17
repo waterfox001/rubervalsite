@@ -1,6 +1,5 @@
 import React from 'react';
 import { MessageCircle, ArrowRight } from 'lucide-react';
-import { INSTRUCTOR_INFO } from '../data/content';
 import { useWhatsAppModal } from '../context/WhatsAppContext';
 
 export const CtaBanner: React.FC = () => {
@@ -34,14 +33,6 @@ export const CtaBanner: React.FC = () => {
         </div>
 
         <div className="mt-6 text-xs text-emerald-200/70">
-          <span>Telefone direto: </span>
-          <a
-            href={`tel:${INSTRUCTOR_INFO.phoneRaw}`}
-            className="font-semibold text-white underline hover:text-[#EAB308]"
-          >
-            {INSTRUCTOR_INFO.phoneDisplay}
-          </a>
-          <span className="mx-2">·</span>
           <span>Mais de 27 anos de credibilidade</span>
         </div>
 

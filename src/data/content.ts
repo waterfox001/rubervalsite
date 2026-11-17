@@ -127,36 +127,72 @@ export const TESTIMONIALS: Testimonial[] = [
 
 export const GALLERY_ITEMS: GalleryItem[] = [
   {
-    id: 'gal-1',
+    id: 'gal-vid-moto',
+    title: 'Aula prática de motocicleta',
+    category: 'category-a',
+    categoryLabel: 'Categoria A · Vídeo',
+    mediaType: 'video',
+    imageUrl: '/images/poster_moto.jpg',
+    videoUrl: '/videos/aula_moto.mp4',
+    duration: '1:00',
+    description:
+      'Treinamento completo na pista de moto em Fortaleza: equilíbrio, curvas no oito e passagem pelos cones com acompanhamento atento.',
+  },
+  {
+    id: 'gal-vid-carro-aluna',
+    title: 'Aula prática no trânsito real',
+    category: 'category-b',
+    categoryLabel: 'Categoria B · Vídeo',
+    mediaType: 'video',
+    imageUrl: '/images/poster_carro_aluna.jpg',
+    videoUrl: '/videos/aula_carro_aluna.mp4',
+    duration: '0:54',
+    description:
+      'Orientação calma de troca de marchas, controle de embreagem e direção segura em avenida de Fortaleza.',
+  },
+  {
+    id: 'gal-vid-baliza',
+    title: 'Passo a passo para a baliza',
+    category: 'category-b',
+    categoryLabel: 'Dica de Baliza · Vídeo',
+    mediaType: 'video',
+    imageUrl: '/images/poster_baliza.jpg',
+    videoUrl: '/videos/dicas_baliza.mp4',
+    duration: '0:39',
+    description:
+      'Preparação de retrovisores, alinhamento, ponto de referência e ajuste final na vaga entre balizadores.',
+  },
+  {
+    id: 'gal-vid-carro-manual',
+    title: 'Evolução no câmbio manual',
+    category: 'instructor',
+    categoryLabel: 'Aula Real · Vídeo',
+    mediaType: 'video',
+    imageUrl: '/images/poster_carro_manual.jpg',
+    videoUrl: '/videos/aula_carro_manual.mp4',
+    duration: '0:20',
+    description:
+      'Aluno desenvolvendo firmeza e segurança nas trocas de marcha até a quarta marcha, sem pressa e sem enrolação.',
+  },
+  {
+    id: 'gal-foto-ruberval',
     title: 'Instrutor Ruberval em Fortaleza',
     category: 'instructor',
-    categoryLabel: 'Instrutor',
+    categoryLabel: 'Instrutor · Foto',
+    mediaType: 'image',
     imageUrl: '/images/ruberval_portrait.jpg',
-    description: 'Mais de 27 anos de dedicação e respeito na formação de condutores no Ceará.',
+    description:
+      'Atendimento dedicado para formação de condutores com segurança, tranquilidade e respeito ao ritmo de cada aluno.',
   },
   {
-    id: 'gal-2',
-    title: 'Aula prática no trânsito real',
+    id: 'gal-foto-veiculo',
+    title: 'Veículo para aulas práticas',
     category: 'instructor',
-    categoryLabel: 'Aulas Práticas',
-    imageUrl: '/images/car_lesson.jpg',
-    description: 'Instrução paciente desenvolvendo reflexos e tranquilidade nas ruas de Fortaleza.',
-  },
-  {
-    id: 'gal-3',
-    title: 'Treino de baliza e manobras',
-    category: 'category-b',
-    categoryLabel: 'Categoria B',
-    imageUrl: '/images/baliza_practice.jpg',
-    description: 'Treinamento de baliza entre balizadores com referências fáceis de memorizar.',
-  },
-  {
-    id: 'gal-4',
-    title: 'Pista de treinamento de moto',
-    category: 'category-a',
-    categoryLabel: 'Categoria A',
-    imageUrl: '/images/moto_lesson.jpg',
-    description: 'Circuito de pista, curvas lentas e domínio de embreagem e freio para motos.',
+    categoryLabel: 'Categoria B · Foto',
+    mediaType: 'image',
+    imageUrl: '/images/ruberval_carro.jpg',
+    description:
+      'Automóvel equipado e regularizado para treinamento de condução urbana e baliza em Fortaleza – CE.',
   },
 ];
 

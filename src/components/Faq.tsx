@@ -23,9 +23,6 @@ export const Faq: React.FC = () => {
           <h2 className="text-3xl sm:text-4xl font-extrabold text-neutral-900 tracking-tight text-balance">
             Perguntas Frequentes
           </h2>
-          <p className="mt-3 text-base text-neutral-600 font-normal">
-            Respostas diretas para as dúvidas mais comuns de novos alunos.
-          </p>
         </div>
 
         {/* Accordion List */}

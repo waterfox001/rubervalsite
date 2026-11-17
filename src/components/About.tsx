@@ -18,7 +18,7 @@ export const About: React.FC = () => {
                 <div className="aspect-[4/3] w-full overflow-hidden">
                   <SafeImage
                     src="/images/car_lesson.jpg"
-                    alt="Ruberval durante aula prática de direção veicular com aluna em Fortaleza"
+                    alt="Aluna durante aula prática de direção veicular com acompanhamento em Fortaleza"
                     className="w-full h-full object-cover block"
                     loading="lazy"
                     fallbackTitle="Aula prática no trânsito"
@@ -108,10 +108,6 @@ export const About: React.FC = () => {
                   <MessageCircle className="w-4 h-4 text-[#EAB308]" />
                   <span>Falar diretamente com o Ruberval</span>
                 </button>
-
-                <span className="text-xs text-neutral-500">
-                  Atendimento em Fortaleza · Parque Dois Irmãos e região
-                </span>
               </div>
 
             </div>

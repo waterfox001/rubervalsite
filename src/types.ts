@@ -14,7 +14,10 @@ export interface GalleryItem {
   title: string;
   category: 'all' | 'category-a' | 'category-b' | 'instructor';
   categoryLabel: string;
+  mediaType: 'image' | 'video';
   imageUrl: string;
+  videoUrl?: string;
+  duration?: string;
   description: string;
 }
 

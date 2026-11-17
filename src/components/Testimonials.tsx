@@ -91,18 +91,6 @@ export const Testimonials: React.FC = () => {
                   </blockquote>
                 </div>
               ))}
-
-              <div className="mt-4 text-right">
-                <a
-                  href={INSTRUCTOR_INFO.googleMaps.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs font-semibold text-[#0D3B26] hover:underline inline-flex items-center gap-1"
-                >
-                  <span>Avaliar o Ruberval no Google</span>
-                  <ExternalLink className="w-3 h-3" />
-                </a>
-              </div>
             </div>
 
           </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, Instagram, ExternalLink, Navigation } from 'lucide-react';
+import { MapPin, Instagram, ExternalLink, Navigation } from 'lucide-react';
 import { INSTRUCTOR_INFO } from '../data/content';
 import { Reveal } from './Reveal';
 
@@ -40,22 +40,6 @@ export const ContactLocation: React.FC = () => {
                   </p>
 
                   <div className="mt-8 space-y-6 text-sm">
-                    
-                    {/* Phone */}
-                    <div className="flex items-start gap-3.5">
-                      <div className="w-9 h-9 rounded-lg bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0">
-                        <Phone className="w-4 h-4 text-[#0D3B26]" />
-                      </div>
-                      <div>
-                        <span className="text-xs text-neutral-500 block">Telefone e WhatsApp</span>
-                        <a
-                          href={`tel:+${INSTRUCTOR_INFO.phoneRaw}`}
-                          className="text-base font-bold text-neutral-900 hover:text-[#0D3B26] transition-colors tabular-nums"
-                        >
-                          {INSTRUCTOR_INFO.phoneDisplay}
-                        </a>
-                      </div>
-                    </div>
 
                     {/* Address */}
                     <div className="flex items-start gap-3.5">
@@ -96,10 +80,6 @@ export const ContactLocation: React.FC = () => {
                     </div>
 
                   </div>
-                </div>
-
-                <div className="mt-8 pt-6 border-t border-neutral-100 text-xs text-neutral-500">
-                  Atendimento presencial e agendamento de aulas em Fortaleza – CE.
                 </div>
               </div>
 

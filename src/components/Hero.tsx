@@ -107,24 +107,15 @@ export const Hero: React.FC = () => {
 
           {/* Right Column: Genuine, clean photograph */}
           <div className="lg:col-span-5">
-            <div className="rounded-2xl overflow-hidden border border-neutral-200 bg-neutral-100 shadow-sm">
-              <div className="aspect-[4/3] w-full overflow-hidden">
+            <div className="max-w-md mx-auto lg:max-w-none rounded-2xl overflow-hidden border border-neutral-200 bg-neutral-950 shadow-sm">
+              <div className="aspect-square w-full overflow-hidden">
                 <SafeImage
                   src="/images/ruberval_portrait.jpg"
                   alt="Ruberval – Instrutor de Autoescola em Fortaleza ao lado do veículo de treinamento"
-                  className="w-full h-full object-cover object-top block"
+                  className="w-full h-full object-cover object-center block"
                   loading="eager"
                   fallbackTitle="Ruberval – Instrutor de Autoescola"
                 />
-              </div>
-              
-              {/* Natural real-life caption */}
-              <div className="p-4 bg-neutral-50 border-t border-neutral-200 flex items-center justify-between text-xs text-neutral-700">
-                <div>
-                  <span className="font-bold text-neutral-900">Ruberval</span>
-                  <span className="text-neutral-500"> — Instrutor de Autoescola</span>
-                </div>
-                <span className="text-[#0D3B26] font-semibold">Fortaleza – CE</span>
               </div>
             </div>
           </div>

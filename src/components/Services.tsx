@@ -96,10 +96,6 @@ export const Services: React.FC = () => {
           ))}
         </div>
 
-        <div className="mt-8 text-center text-xs text-neutral-500">
-          Aulas práticas individuais em conformidade com as exigências dos órgãos de trânsito em Fortaleza – CE.
-        </div>
-
       </div>
     </section>
   );

@@ -46,14 +46,14 @@ export const Header: React.FC = () => {
           <a
             href="#inicio"
             onClick={(e) => handleNavClick(e, '#inicio')}
-            className="flex items-center gap-2.5 text-slate-900 group whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0D3B26] rounded-lg"
+            aria-label="Ruberval – Início"
+            className="flex items-center group shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0D3B26] rounded-full"
           >
-            <div className="w-9 h-9 rounded-lg bg-[#0D3B26] text-[#EAB308] flex items-center justify-center font-bold text-lg shadow-xs transition-transform group-hover:scale-105">
-              R
-            </div>
-            <span className="font-extrabold text-lg sm:text-xl tracking-tight text-[#0D3B26] leading-none">
-              Ruberval
-            </span>
+            <img
+              src="/images/logo_ruberval.png"
+              alt="Logo Ruberval Instrutor"
+              className="h-11 w-11 sm:h-12 sm:w-12 object-contain rounded-full transition-transform group-hover:scale-105"
+            />
           </a>
 
           {/* Zone 2: 5 Single-line Navigation Links */}
